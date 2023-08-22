@@ -1,0 +1,111 @@
+.footer {
+    background-color: $black-color;
+
+    .footer-box {
+        display: flex;
+        padding: 64px 0px;
+        color: $white-color;
+        justify-content: space-between;
+
+        .footer-title {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 24px;
+            font-weight: $font-semibold;
+        }
+
+        .footer-contacts {
+
+            .footer-copy {
+                width: 100%;
+                max-width: 150px;
+                margin-bottom: 40px;
+            }
+
+            .social {
+                gap: 10px;
+                display: flex;
+                align-items: center;
+
+                .social__link {
+                    width: 32px;
+                    height: 32px;
+                    padding: 8px;
+                    border-radius: 50%;
+                    background-color: $dod-color2;
+                    transition: background-color $main-transition;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        transition: transform $main-transition;
+                    }
+
+                    &:hover {
+                        background-color: #313030;
+                    }
+
+                    &:hover img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .footer-nav {
+            gap: 30px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .footer-links {
+                gap: 12px;
+                width: 100%;
+                display: flex;
+                width: 170px;
+                flex-direction: column;
+
+                .footer-links__link {
+                    color: $dod-color;
+                    padding-bottom: 3px;
+                    transition: all $main-transition;
+                    border-bottom: 2px solid transparent;
+
+                    &:hover {
+                        color: $accent-color2;
+                        border-bottom: 2px solid $accent-color1;
+                    }
+                }
+            }
+
+            .contact-form {
+                width: 100vw;
+                max-width: 255px;
+                position: relative;
+
+                .contact-form__input {
+                    width: 100%;
+                    font-size: 14px;
+                    line-height: 24px;
+                    border-radius: 8px;
+                    color: $white-color;
+                    padding: 9px 30px 9px 12px;
+                    background-color: $dod-color2;
+
+                    &::placeholder {
+                        color: $white-color;
+                    }
+                }
+
+                .contact-form__button {
+                    position: absolute;
+                    top: 50%;
+                    right: 9px;
+                    transform: translateY(-50%);
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}

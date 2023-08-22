@@ -1,0 +1,79 @@
+.section-gallery {
+
+    .gallery {
+        padding: 80px 0px;
+        position: relative;
+
+        .gallery__title {
+            margin-bottom: 48px;
+        }
+
+        .gallery__list {
+            gap: 30px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .gallery__elem {
+                flex: 1;
+
+                .gallery__button {
+                    width: 100%;
+                    min-width: 350px;
+                    overflow: hidden;
+                    max-height: 350px;
+                    transition: border-radius $main-transition;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        transition: transform $main-transition;
+                    }
+
+                    &:hover img {
+                        transform: scale(1.1);
+                    }
+
+                    &:hover {
+                        border-radius:
+                            random(50) + px random(50) + px random(50) + px random(50) + px;
+                    }
+                }
+            }
+        }
+
+        .gallery-image {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            position: fixed;
+            background-color: $dod-color2;
+
+            .gallery-image__elem {
+                top: 50%;
+                left: 50%;
+                position: fixed;
+                max-width: 90%;
+                max-height: 90%;
+                transform: translate(-50%, -50%);
+            }
+
+            .gallery-image__button {
+                top: 20px;
+                right: 20px;
+                height: 45px;
+                font-size: 30px;
+                position: absolute;
+            }
+        }
+
+        .gallery-image.active {
+            display: block;
+        }
+    }
+}

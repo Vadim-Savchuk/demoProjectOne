@@ -1,0 +1,138 @@
+// Assistance_________________________
+@import './assistance/normalize.scss';
+@import './assistance/vars.scss';
+@import './assistance/fonts.scss';
+
+// Sections___________________________
+@import './header/header.scss';
+@import './sections/section-intro.scss';
+@import './sections/section-stats.scss';
+@import './sections/section-feature.scss';
+@import './sections/section-price.scss';
+@import './sections/section-projects.scss';
+@import './sections/section-about.scss';
+@import './sections/section-offers.scss';
+@import './sections/section-gallery.scss';
+@import './sections/section-testimonials.scss';
+@import './footer/footer.scss';
+
+// Components_________________________
+
+
+
+// Adaptive___________________________
+@import './assistance/adaptive.scss';
+
+
+// Shared styles=====================↓
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    line-height: 32px;
+    color: $black-color;
+    font-size: $main-size;
+    font-family: $hero-font;
+    font-weight: $font-normal;
+    background-color: $white-color;
+}
+
+body.hiden {
+    overflow: hidden;
+}
+
+.wrapper {
+    margin: 0 auto;
+    min-height: 100%;
+    overflow: hidden;
+    max-width: 1440px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0px 30px;
+}
+
+.heading {
+    font-size: 72px;
+    line-height: 98px;
+    color: $black-color;
+    font-weight: $font-extrabold;
+}
+
+.title {
+    font-size: 48px;
+    line-height: 64px;
+    color: $black-color;
+    font-weight: $font-extrabold;
+}
+
+.button {
+    font-size: 14px;
+    padding: 8px 13px;
+    border-radius: 8px;
+    color: $white-color;
+    font-weight: $font-semibold;
+    background-color: $accent-color1;
+    border: 2px solid $accent-color1;
+    transition: all $main-transition;
+
+    &:hover {
+        color: $black-color;
+        background-color: $white-color;
+    }
+}
+
+.button-arrow {
+    font-size: 20px;
+    line-height: 30px;
+    position: relative;
+    color: $accent-color1;
+    display: inline-block;
+    font-weight: $font-semibold;
+
+    &::after {
+        right: -40px;
+        content: '\27F6';
+        font-size: 30px;
+        margin-left: 10px;
+        vertical-align: middle;
+        transition: margin-left $main-transition;
+    }
+
+    &:hover::after {
+        margin-left: 15px;
+    }
+}
+
+// Scroll====================
+// Firefox 
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $accent-color1 $accent-color2;
+}
+
+// Chrome, Edge, Safari 
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: $accent-color2;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $accent-color1;
+    border-radius: 20px;
+    border: 3px solid $accent-color2;
+}

@@ -1,0 +1,87 @@
+.header {
+    background-color: $white-color;
+
+    .header__nav {
+        display: flex;
+        padding: 16px 0px;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            z-index: 3;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+
+            .nav__list {
+                gap: 32px;
+                display: flex;
+                align-items: center;
+
+                .nav__link {
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: $black-color;
+                    font-weight: $font-semibold;
+                    transition: color $main-transition;
+
+                    &:hover {
+                        color: $accent-color1;
+                    }
+                }
+            }
+        }
+
+        .burger-menu {
+            display: none;
+        
+            a {
+                cursor: pointer;
+                padding: 12px 0;
+
+                span {
+                    position: relative;
+                    display: block;
+                    width: 20px;
+                    height: 4px;
+                    background: #222;
+                    transition: all .2s ease-in-out;
+
+                    &:before,
+                    &:after {
+                        position: absolute;
+                        background: #222;
+                        content: '';
+                        width: 20px;
+                        height: 4px;
+                        transition: all .2s ease-in-out;
+                    }
+
+                    &:before {
+                        top: -8px;
+                    }
+
+                    &:after {
+                        top: 8px;
+                    }
+                }
+            }
+
+            a.active {
+                span {
+                    background: transparent;
+
+                    &:before {
+                        transform: rotate(45deg) translate(5px, 6px);
+                    }
+
+                    &:after {
+                        transform: rotate(-45deg) translate(5px, -6px);
+                    }
+                }
+            }
+        }
+    }
+}

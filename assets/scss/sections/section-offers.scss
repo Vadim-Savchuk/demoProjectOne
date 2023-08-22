@@ -1,0 +1,52 @@
+.section-offers {
+
+    .offers {
+        gap: 10px;
+        display: flex;
+        margin: 170px 0px;
+        align-items: center;
+
+        padding: 40px 48px;
+        color: $white-color;
+        border-radius: 16px;
+        background-color: $accent-color1;
+
+        .offers__content {
+            flex: 1;
+            width: 60%;
+
+            .offers__title {
+                color: $white-color;
+            }
+
+            .offers__text {
+                width: 100%;
+                max-width: 450px;
+                margin: 32px 0px;
+            }
+
+            .offers__button-arrow {
+                font-size: 30px;
+                line-height: 30px;
+                color: $white-color;
+
+                &::after {
+                    font-size: 40px;
+                }
+            }
+
+        }
+
+        .offers__images {
+            width: 40%;
+            position: relative;
+
+            .offers__image {
+                top: 0;
+                right: 0;
+                position: absolute;
+                transform: translate(15%, -50%);
+            }
+        }
+    }
+}

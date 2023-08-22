@@ -1,0 +1,13 @@
+.section-stats {
+
+    .stats {
+        gap: 10px;
+        display: flex;
+        padding: 64px 0px;
+        align-items: center;
+
+        .stats__elem {
+            width: 25%;
+        }
+    }
+}
